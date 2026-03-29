@@ -1,0 +1,91 @@
+Test Task - Custom Reusable Components
+
+Objective
+The goal of this task is to create a set of reusable UI components inspired by Ant Design. This
+will give you a deeper understanding of Ant Design components and their underlying
+functionality, helping you replicate similar behavior in your custom components.
+
+Task Requirements
+You need to create custom UI components using React 18 and Tailwind CSS, inspired by the
+functionality and props of Ant Design components. Do not use Ant Design itself; instead,
+replicate similar behavior and props with your own components. Ensure your code is clean and
+simple.
+
+Components to Create
+1. Custom Button
+○
+Reference: Ant Design Button
+○
+Add props like type, size, and onClick.
+○
+Style it to make it visually appealing using Tailwind CSS.
+2. Dropdown Menu
+○
+Reference: Ant Design Dropdown
+○
+Add a list of menu items.
+○
+Support props for menu direction and click/hover triggers.
+3. Empty State
+○
+Reference: Ant Design Empty
+○
+Create a reusable component to show when there is no data.
+○
+Add props for custom messages and images.
+4. Collapsible Panel
+○
+Reference: Ant Design Collapse
+○
+Create a multi-section collapsible panel.
+○
+Support props for default open/closed panels.
+5. Tabbed Component
+○
+Reference: Ant Design Tabs
+○
+Add dynamic tabs with content areas.
+○
+Support props for setting the default active tab (activeKey) and switching
+between tabs.
+6. Notification○
+Reference: Ant Design Notification
+○
+Create a function to show success, error, or warning messages.
+7. Loading Spinner
+○
+Reference: Ant Design Spin
+○
+Create a reusable loading spinner component.
+8. Drawer Component
+○
+Reference: Ant Design Drawer
+○
+Create a customizable drawer for side menus.
+○
+Add props for width and visibility.
+9. Modal Component
+○
+Reference: Ant Design Modal
+○
+Create a reusable modal for confirmation or alerts.
+○
+Support props for titles, content, and actions.
+10. Form Component
+○
+Reference: Ant Design Form
+○
+Add validation rules.
+
+Deliverables
+1. Create a GitHub repository for your code.
+2. Each component should have its own file.
+3. Include a short README.md file explaining how to run your project.
+4. Push your code to the repository and share the link with us.
+Evaluation Criteria
+1. Code Quality: Clean and readable code with comments.
+2. Reusability: Components should be easy to reuse.
+3. Functionality: Components should work as expected.
+4. Creativity: How well you style and customize the components.
+
+Good luck! We are excited to see your work.

@@ -1,0 +1,21 @@
+{
+    "terminal.integrated.env.windows": {},
+    "files.autoSave": "afterDelay",
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "[scss]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    }
+}
