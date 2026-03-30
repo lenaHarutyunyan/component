@@ -10,11 +10,11 @@ function Tabs({ items = [], defaultActiveKey }) {
           <button
             key={tab.key}
             onClick={() => setActive(tab.key)}
-            className={`px-4 py-2 ${
-              active === tab.key
-                ? "border-b-2 border-blue-500 text-blue-500"
-                : "text-gray-500"
-            }`}
+            className={`px-4 py-2 ${active === tab.key
+              ? "border-b-2 border-blue-500 text-blue-500"
+              : "text-gray-500"
+              }`
+            }
           >
             {tab.label}
           </button>

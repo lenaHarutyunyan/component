@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Button from "../customButton/Button";
 
-function Form({ position = "vertical", onSubmit, children, title, }) {
-  const [error, setError] = useState(false);
+const POSITIONS = {
+  horizontal: "flex flex-row",
+  vertical: "flex flex-col",
+};
 
-  const Positions = {
-    horizontal: "flex flex-row",
-    vertical: "flex flex-col",
-  };
+function Form({ position = "vertical", onSubmit, children, title }) {
+  const [error, setError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,7 +16,9 @@ function Form({ position = "vertical", onSubmit, children, title, }) {
       new FormData(e.target)
     );
 
-    if (!data.name || !data.surname || !data.age) {
+    const allFilled = Object.values(data).every(value => value.trim() !== "");
+
+    if (!allFilled) {
       setError(true);
       return;
     }
@@ -32,7 +34,7 @@ function Form({ position = "vertical", onSubmit, children, title, }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`${Positions[position]} gap-5 p-4 border rounded`}
+      className={`${POSITIONS[position]} gap-5 p-4 border rounded`}
     >
       {title && (
         <h2 className="text-xl text-center w-full">

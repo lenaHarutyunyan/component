@@ -1,62 +1,50 @@
 import { useState } from "react";
+import { dropDownItems, tabsItems } from "./components/Constants/Constants";
 
-import Button from "./components/customButton/Button"
-import Empty from "./components/Empty/Empty"
-import Form from "./components/Form/Form"
-import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner"
-import Modal from "./components/Modal/Modal"
-import Section from "./components/sections/Section"
-import FormItems from "./components/Form/FormItems"
+import Button from "./components/customButton/Button";
+import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
+import Empty from "./components/Empty/Empty";
+import Modal from "./components/Modal/Modal";
+import Form from "./components/Form/Form";
+import FormItem from "./components/Form/FormItem";
+import Section from "./components/sections/Section";
 import DropdownMenu from "./components/DropdownMenu/DropdownMenu"
-import CollapsiblePanel from "./components/CollapsiblePanel/CollapsiblePanel"
-import Notification from "./components/Notification/Notification"
-import Tabs from "./components/Tabs/Tabs"
-import Drawer from "./components/Drawer/Drawer"
-
-const items = [
-  {
-    key: 1,
-    label: "example 1",
-  },
-  {
-    key: 2,
-    label: "example 2",
-  },
-  {
-    key: 3,
-    label: "example 3",
-  }
-];
-
-const tabsItems = [
-  { key: "1", label: "Tab 1", children: "Content 1" },
-  { key: "2", label: "Tab 2", children: "Content 2" },
-  { key: "3", label: "Tab 3", children: "Content 3" },
-];
+import CollapsiblePanel from "./components/CollapsiblePanel/CollapsiblePanel";
+import Tabs from "./components/Tabs/Tabs";
+import Drawer from "./components/Drawer/Drawer";
+import Notification from "./components/Notification/Notification";
 
 function App() {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
   const [message, setMessage] = useState("Saved!");
-
 
   return (
     <div className="bg-gray-900 w-full h-auto text-white flex flex-col gap-5 items-center p-5">
       <h1 className="text-4xl">Custom Components</h1>
-
       <div className="flex flex-col w-[90%] gap-10">
+
         {/* Examples of buttons */}
         <Section title="Buttons">
           <div className="flex gap-5">
-            <Button size="small" type="primary" variant="dashed">
-              small primary border-dashed
-            </Button>
-            <Button size="middle" type="danger">
-              middle danger border-filled
-            </Button>
-            <Button size="large" type="submit" variant="outlined">
-              large submit border-outlined
-            </Button>
+            <div>
+              <Button data-testing="3" abc="2">Testing</Button>
+            </div>
+            <div>
+              <Button size="small" type="primary" variant="dashed">
+                small primary border-dashed
+              </Button>
+            </div>
+            <div>
+              <Button size="middle" type="danger">
+                middle danger border-filled
+              </Button>
+            </div>
+            <div>
+              <Button size="large" type="submit" variant="outlined">
+                large submit border-outlined
+              </Button>
+            </div>
           </div>
         </Section>
 
@@ -72,16 +60,20 @@ function App() {
 
         {/* Examples of Empty component */}
         <Section title="Empty">
-          <Empty title="No products" img="EmptyList" size="large" />
-          <Empty title="No Photo" img="EmptyGallery" size="middle" />
-          <Empty title="No folders" img="EmptyFolder" />
+          <Empty title="No products" image="EmptyList" size="large" />
+          <Empty title="No Photo" image="EmptyGallery" size="middle" />
+          <Empty title="No folders" image="/Empty-Folder.avif" />
           <Empty title="Empty state" customImg="/Empty-list.jpg" />
+          <Empty />
         </Section>
 
         {/* Examples of Modal component */}
-        <Section title="Modal" >
-          <Button type="primary" onClick={() => setModalIsOpen(true)}>Open Modal</Button>
-          <Modal modalIsOpen={modalIsOpen} position="bottom" onClose={() => setModalIsOpen(false)}>Delete this item?</Modal>
+        <Section title="Modal">
+          <Button type="primary" onClick={() => setIsModalOpen(true)}>Open Modal</Button>
+          <Modal isModalOpen={isModalOpen} size="middle" position="bottom" onClose={() => setIsModalOpen(false)}>
+            <span>Delete this item?</span>
+            <Button>Yes</Button>
+          </Modal>
         </Section>
 
         {/* Examples of Form */}
@@ -90,25 +82,35 @@ function App() {
             title="Login form"
             onSubmit={(data) => console.log(data)}
           >
-            <FormItems name="name" type="text" />
-            <FormItems name="surname" type="text" />
-            <FormItems name="age" type="number" />
+            <FormItem name="name" type="text" />
+            <FormItem name="surname" type="text" />
+            <FormItem name="age" type="number" />
+          </Form>
+        </Section>
+
+        <Section title="Login Form">
+          <Form
+            title="Login form"
+            onSubmit={(data) => console.log(data)}
+          >
+            <FormItem name="email" type="text" />
+            <FormItem name="password" type="password" />
           </Form>
         </Section>
 
         {/* Examples of dropdown menu */}
         <Section title="Dropdown Menu">
           <div className="flex gap-6 flex-wrap">
-            <DropdownMenu items={items} position="bottomLeft">
+            <DropdownMenu items={dropDownItems} position="bottomLeft">
               <Button>bottomLeft</Button>
             </DropdownMenu>
-            <DropdownMenu items={items} position="bottomRight">
+            <DropdownMenu items={dropDownItems} position="bottomRight">
               <Button>bottomRight</Button>
             </DropdownMenu>
-            <DropdownMenu items={items} position="topLeft">
+            <DropdownMenu items={dropDownItems} position="topLeft" action="click">
               <Button>topLeft</Button>
             </DropdownMenu>
-            <DropdownMenu items={items} position="topRight">
+            <DropdownMenu items={dropDownItems} position="topRight" action="click">
               <Button>topRight</Button>
             </DropdownMenu>
           </div>
