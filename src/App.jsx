@@ -45,7 +45,7 @@ function App() {
       <h1 className="text-4xl">Custom Components</h1>
 
       <div className="flex flex-col w-[90%] gap-10">
-        {/* кнопка примеры */}
+        {/* Examples of buttons */}
         <Section title="Buttons">
           <div className="flex gap-5">
             <Button size="small" type="primary" variant="dashed">
@@ -60,7 +60,7 @@ function App() {
           </div>
         </Section>
 
-        {/* Пример Loading Spinner*/}
+        {/* Examples of Loading Spinner*/}
         <Section title="Loading Spinner">
           <LoadingSpinner title="Example with title type 1" size="small" />
           <LoadingSpinner size="middle" color="primary" />
@@ -70,7 +70,7 @@ function App() {
           <LoadingSpinner size="large" title="type 2" variant="dots" />
         </Section>
 
-        {/* Пример Empty */}
+        {/* Examples of Empty component */}
         <Section title="Empty">
           <Empty title="No products" img="EmptyList" size="large" />
           <Empty title="No Photo" img="EmptyGallery" size="middle" />
@@ -78,13 +78,13 @@ function App() {
           <Empty title="Empty state" customImg="/Empty-list.jpg" />
         </Section>
 
-        {/* Примеры модалки */}
+        {/* Examples of Modal component */}
         <Section title="Modal" >
           <Button type="primary" onClick={() => setModalIsOpen(true)}>Open Modal</Button>
           <Modal modalIsOpen={modalIsOpen} position="bottom" onClose={() => setModalIsOpen(false)}>Delete this item?</Modal>
         </Section>
 
-        {/* Примеры Формы */}
+        {/* Examples of Form */}
         <Section title="Form Component">
           <Form
             title="Login form"
@@ -96,7 +96,7 @@ function App() {
           </Form>
         </Section>
 
-        {/* Пример dropdown menu */}
+        {/* Examples of dropdown menu */}
         <Section title="Dropdown Menu">
           <div className="flex gap-6 flex-wrap">
             <DropdownMenu items={items} position="bottomLeft">
@@ -114,7 +114,7 @@ function App() {
           </div>
         </Section>
 
-        {/* Пример Collapsible Panel  */}
+        {/* Examples of Collapsible Panel  */}
         <Section title="Collapsible Panel">
           <div className="flex flex-col w-[60%]">
             <CollapsiblePanel title="First">
@@ -134,12 +134,12 @@ function App() {
           </div>
         </Section>
 
-        {/* Пример Tabs  */}
+        {/* Examples of Tabs  */}
         <Section title="Tabs">
           <Tabs items={tabsItems} defaultActiveKey="1" />
         </Section>
 
-        {/* Drawer Component */}
+        {/* Examples of Drawer Component */}
         <Section title="Drawer">
           <Drawer open={drawerIsOpen} onClose={() => setDrawerIsOpen(false)}>
             <h2>My Drawer</h2>
@@ -148,7 +148,7 @@ function App() {
           <Button onClick={() => setDrawerIsOpen(true)}>Open Drawer</Button>
         </Section>
 
-        {/* Пример Notification Panel  */}
+        {/* Examples of Notification Panel  */}
         <Section title="Notification">
           <Button onClick={() => setMessage("Hello!")}>
             Show Notification
