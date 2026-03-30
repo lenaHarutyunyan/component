@@ -1,10 +1,4 @@
-function Button({
-    type = "default",
-    variant = "filled",
-    size = "small",
-    onClick,
-    children,
-}) {
+function Button({ type = "default", variant = "filled", size = "small", onClick, children }) {
     const types = {
         primary: "bg-blue-500 text-white hover:bg-blue-600",
         danger: "bg-red-500 text-white hover:bg-red-600",
@@ -26,9 +20,9 @@ function Button({
     }
 
     return (
-        <button onClick={onClick} className={`cursor-pointer ${types[type]} ${variants[variant]} ${sizes[size]}`}>
+        <button onClick={onClick} className={`cursor-pointer ${types[type]} ${variants[variant]} ${sizes[size]}`} >
             {children}
-        </button>)
-}
+        </button >)
 
+}
 export default Button;

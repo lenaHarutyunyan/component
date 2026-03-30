@@ -1,19 +1,14 @@
-function Empty({
-  title,
-  size = "small",
-  img = "EmptyList",
-  customImg
-}) {
+function Empty({ title, size = "small", img = "EmptyList", customImg }) {
   const Images = {
     EmptyList: "/Empty-list.jpg",
     EmptyGallery: "/Empty-Gallery.jpg",
-    EmptyFolder: "/Empty-Folder.avif",
+    EmptyFolder: "/Empty-Folder.avif"
   };
 
   const Sizes = {
     small: "w-16 h-16",
     middle: "w-40 h-40",
-    large: "w-60 h-60",
+    large: "w-60 h-60"
   };
 
   const imageSrc = customImg || Images[img];

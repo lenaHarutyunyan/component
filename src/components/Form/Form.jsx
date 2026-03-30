@@ -1,12 +1,7 @@
 import { useState } from "react";
 import Button from "../customButton/Button";
 
-function Form({
-  position = "vertical",
-  onSubmit,
-  children,
-  title,
-}) {
+function Form({ position = "vertical", onSubmit, children, title, }) {
   const [error, setError] = useState(false);
 
   const Positions = {

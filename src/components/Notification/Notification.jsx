@@ -1,11 +1,6 @@
 import { useEffect } from "react";
 
-function Notification({
-  message,
-  position = "topRight",
-  onClose,
-  duration = 3000,
-}) {
+function Notification({ message, position = "topRight", onClose, duration = 3000 }) {
   if (!message) return null;
 
   const Positions = {
@@ -14,7 +9,7 @@ function Notification({
     bottomLeft: "bottom-4 left-4",
     bottomRight: "bottom-4 right-4",
     topCenter: "top-4 left-1/2 -translate-x-1/2",
-    bottomCenter: "bottom-4 left-1/2 -translate-x-1/2",
+    bottomCenter: "bottom-4 left-1/2 -translate-x-1/2"
   };
 
   useEffect(() => {
@@ -28,9 +23,7 @@ function Notification({
   }, [message, onClose, duration]);
 
   return (
-    <div
-      className={`fixed ${Positions[position]} bg-green-500 text-white p-3 rounded shadow`}
-    >
+    <div className={`fixed ${Positions[position]} bg-green-500 text-white p-3 rounded shadow`}>
       {message}
     </div>
   );

@@ -22,9 +22,7 @@ function DropdownMenu({ items, position = "bottomRight", children }) {
       {children}
 
       {opened && (
-        <div
-          className={`absolute z-10 bg-white border border-gray-200 shadow-md rounded text-black ${PopupPosition[position]}`}
-        >
+        <div className={`absolute z-10 bg-white border border-gray-200 shadow-md rounded text-black ${PopupPosition[position]}`}>
           {items.map((item) => (
             <div
               key={item.key}

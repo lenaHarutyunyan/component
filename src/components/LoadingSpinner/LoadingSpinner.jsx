@@ -1,20 +1,14 @@
-function LoadingSpinner({
-    title,
-    size = "middle",
-    color = "gray",
-    variant = "circle",
-}) {
-
+function LoadingSpinner({ title, size = "middle", color = "gray", variant = "circle" }) {
     const Sizes = {
         small: "w-3 h-3",
         middle: "w-5 h-5",
-        large: "w-7 h-7",
+        large: "w-7 h-7"
     };
 
     const Colors = {
         gray: "bg-gray-500",
         blue: "bg-blue-500",
-        red: "bg-red-500",
+        red: "bg-red-500"
     };
 
     if (variant === "dots") {
